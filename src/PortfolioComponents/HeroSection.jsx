@@ -12,17 +12,19 @@ export default function HeroSection() {
             bgColor: "#0D0716",
             textColor: "#fff",
             links: [
-                { label: "Company", ariaLabel: "About Company" },
-                { label: "Careers", ariaLabel: "About Careers" }
+                { label: "Education", ariaLabel: "Education" },
+                { label: "Languages", ariaLabel: "Languages" },
+                { label: "Stats", ariaLabel: "Tech Stats" },
+                { label: "Achivements", ariaLabel: "Achivements" },
             ]
         },
         {
-            label: "Services",
+            label: "Services & Experiences",
             bgColor: "#170D27",
             textColor: "#fff",
             links: [
-                { label: "Featured", ariaLabel: "Featured Projects" },
-                { label: "Case Studies", ariaLabel: "Project Case Studies" }
+                { label: "Work Description", ariaLabel: "Services offered" },
+                { label: "Work Experience", ariaLabel: "Experiences" }
             ]
         },
         {
@@ -30,9 +32,8 @@ export default function HeroSection() {
             bgColor: "#271E37",
             textColor: "#fff",
             links: [
-                { label: "Email", ariaLabel: "Email us" },
-                { label: "Twitter", ariaLabel: "Twitter" },
-                { label: "LinkedIn", ariaLabel: "LinkedIn" }
+                { label: "Work Images", ariaLabel: "Email us" },
+                { label: "Project links", ariaLabel: "Twitter" },
             ]
         }
     ];
