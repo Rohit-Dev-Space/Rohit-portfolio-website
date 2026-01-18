@@ -552,7 +552,7 @@ const MagicBento = ({
 
   .card-responsive .card:nth-child(4) {
     grid-area: card4;
-    min-height: 260px;
+    min-height: 280px;
   }
 
   .card-responsive .card:nth-child(5) {
@@ -874,7 +874,7 @@ const MagicBento = ({
                             <p className='md:text-3xl text-lg '>Frontend</p>
                             {frontendStats.map((info, index) => (
                               <div key={index} className="space-y-1 w-full flex flex-row gap-5">
-                                <div className='w-1/3 md:text-xs text-[8px] h-fit'>
+                                <div className='w-1/3 md:text-xs text-[5px] h-fit'>
                                   {info.topic}
                                 </div>
                                 <AnimatePresence>
@@ -904,26 +904,31 @@ const MagicBento = ({
                           <div className='w-full flex flex-col md:gap-3 gap-2'>
                             <p className='md:text-3xl text-lg'>Backend</p>
                             {backendStats.map((info, index) => (
-                              <div key={index} className="space-y-1 w-full flex md:gap-8 gap-1 flex-row">
-                                <div className='w-1/3 md:text-xs text-[8px] h-fit'>
+                              <div key={index} className="space-y-1 w-full flex flex-row gap-5">
+                                <div className='w-1/3 md:text-xs text-[5px] h-fit'>
                                   {info.topic}
                                 </div>
-                                <div className="flex justify-between md:gap-5 gap-2 text-sm font-medium">
-                                  <motion.span
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.6 }}
+                                <AnimatePresence>
+                                  <div className="flex justify-between md:gap-5 gap-1 text-sm font-medium">
+                                    <motion.span
+                                      initial={{ opacity: 0 }}
+                                      animate={{ opacity: 1 }}
+                                      transition={{ duration: 0.6 }}
+
+                                    >
+                                      <p className='md:text-sm text-[8px]'>{info.value}%</p>
+                                    </motion.span>
+                                  </div>
+
+                                  <motion.div
+                                    className='w-full ml-5 h-auto'
+                                    initial={{ width: 0 }}
+                                    animate={{ width: `250px` }}
+                                    transition={{ duration: 1.2 }}
                                   >
-                                    <p className='md:text-sm text-[8px]'>{info.value}%</p>
-                                  </motion.span>
-                                </div>
-                                <motion.div
-                                  initial={{ width: 0 }}
-                                  animate={{ width: `250px` }}
-                                  transition={{ duration: 1.2 }}
-                                >
-                                  <ProgressBar value={info.value} className="h-3 rounded" />
-                                </motion.div>
+                                    <ProgressBar value={info.value} className=" h-3 rounded" />
+                                  </motion.div>
+                                </AnimatePresence>
                               </div>
                             ))}
                           </div>

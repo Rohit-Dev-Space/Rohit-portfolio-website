@@ -16,7 +16,8 @@ export default function HeroSection() {
                 { label: "Languages", ariaLabel: "Languages" },
                 { label: "Stats", ariaLabel: "Tech Stats" },
                 { label: "Achivements", ariaLabel: "Achivements" },
-            ]
+            ],
+            id: 'aboutMe'
         },
         {
             label: "Services & Experiences",
@@ -25,7 +26,8 @@ export default function HeroSection() {
             links: [
                 { label: "Work Description", ariaLabel: "Services offered" },
                 { label: "Work Experience", ariaLabel: "Experiences" }
-            ]
+            ],
+            id: 'services'
         },
         {
             label: "My Work",
@@ -34,7 +36,8 @@ export default function HeroSection() {
             links: [
                 { label: "Work Images", ariaLabel: "Email us" },
                 { label: "Project links", ariaLabel: "Twitter" },
-            ]
+            ],
+            id: 'mywork'
         }
     ];
 

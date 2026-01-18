@@ -185,7 +185,7 @@ const CardNav = ({
             <div
               onClick={() =>
                 document
-                  .getElementById('mywork')
+                  .getElementById(item.id)
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
               key={`${item.label}-${idx}`}

@@ -124,7 +124,7 @@ export default function Services() {
                     <Carousel className="w-8/9">
                         <CarouselContent className="w-full flex justify-between space-x-1 items-center">
                             {ServiceAndExperience.map((info, index) => (
-                                <CarouselItem className="basis-full w-full h-auto" key={index}>
+                                <CarouselItem className="basis-full w-full h-auto ml-1" key={index}>
                                     <PixelTransition
                                         key={index}
                                         firstContent={
