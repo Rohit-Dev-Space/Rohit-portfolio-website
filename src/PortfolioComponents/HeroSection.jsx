@@ -42,7 +42,7 @@ export default function HeroSection() {
     ];
 
     return (
-        <section className="w-full h-dvh overflow-hidden md:mb-15 -mb-5" id="home">
+        <section className="w-full h-dvh md:overflow-hidden md:mb-15 -mb-5" id="home">
             <div className="relative z-10 flex flex-col gap-15 items-center justify-center w-full py-7">
                 <div className="bg-white/10 backdrop-blur-xl border md:flex hidden justify-between px-3 pr-20 items-center border-white/20 shadow-lg md:w-3/5 md:mx-auto w-6/7 h-20 rounded-full">
                     <div className="flex">

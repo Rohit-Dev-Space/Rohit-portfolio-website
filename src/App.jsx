@@ -45,7 +45,7 @@ function App() {
                 }
               }}
               className="
-            fixed bottom-12 right-6
+            fixed bottom-16 right-6
             w-10 h-10 rounded-full
             bg-white/20 backdrop-blur-xl
             border border-white/40 text-white

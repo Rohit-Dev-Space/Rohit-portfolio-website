@@ -88,7 +88,6 @@ const CardNav = ({
       tl?.kill();
       tlRef.current = null;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ease, items]);
 
   useLayoutEffect(() => {
@@ -122,10 +121,12 @@ const CardNav = ({
   const toggleMenu = () => {
     const tl = tlRef.current;
     if (!tl) return;
+
     if (!isExpanded) {
+      tl.eventCallback('onReverseComplete', null); // reset callback
       setIsHamburgerOpen(true);
       setIsExpanded(true);
-      tl.play(0);
+      tl.restart(); // important change
     } else {
       setIsHamburgerOpen(false);
       tl.eventCallback('onReverseComplete', () => setIsExpanded(false));
@@ -164,7 +165,7 @@ const CardNav = ({
           <div className='flex order-1 md:order-none'>
             <div
               className="logo-container flex items-center bg-white/40 w-fit h-fit p-3 rounded-full md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-              <img src={logo} alt={logoAlt} className="logo h-[28px]" />
+              <img src={logo} alt={logoAlt} className="logo h-[20px]" />
             </div>
           </div>
           <p className="text-white order-2 text-xl leading-5 mt-2 ml-4">Rohit <br /> Kharvi.</p>
@@ -183,11 +184,21 @@ const CardNav = ({
           aria-hidden={!isExpanded}>
           {(items || []).slice(0, 3).map((item, idx) => (
             <div
-              onClick={() =>
+              onClick={() => {
                 document
                   .getElementById(item.id)
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
+                  ?.scrollIntoView({ behavior: "smooth" });
+
+                const tl = tlRef.current;
+                if (tl) {
+                  setIsHamburgerOpen(false);
+                  tl.eventCallback("onReverseComplete", () => {
+                    setIsExpanded(false);
+                    tl.progress(0);
+                  });
+                  tl.reverse();
+                }
+              }}
               key={`${item.label}-${idx}`}
               className="nav-card select-none relative flex flex-col gap- p-[12px_16px] rounded-[calc(0.75rem-0.2rem)] min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]"
               ref={setCardRef(idx)}

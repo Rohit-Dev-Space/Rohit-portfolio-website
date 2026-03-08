@@ -7,7 +7,7 @@ export default function ProgressBar({ value }) {
             value={value}
         >
             <Progress.Indicator
-                className="h-full w-full bg-linear-to-r from-teal-300  rounded-2xl to-teal-700 transition-transform duration-700 ease-out"
+                className="h-full w-full origin-left bg-linear-to-r from-teal-200 via-teal-300  rounded-2xl to-teal-700 transition-transform duration-700 ease-out"
                 style={{ transform: `scaleX(${value / 100})` }}
             />
         </Progress.Root>

@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { AnimatePresence, motion } from "framer-motion";
 import ProgressBar from './ProgressBar';
-import { Code, Code2, GraduationCap, Languages, PencilRuler } from 'lucide-react';
+import { Award, Code, Code2, ExternalLink, GraduationCap, Languages, PencilRuler } from 'lucide-react';
 
 
 const DEFAULT_PARTICLE_COUNT = 12;
@@ -452,7 +452,7 @@ const GlobalSpotlight = ({
 
 const BentoCardGrid = ({ children, gridRef }) => (
   <div
-    className="bento-section grid gap-2 p-3 w-full select-none relative"
+    className="bento-section grid gap-2 w-full select-none relative"
     style={{ fontSize: 'clamp(1rem, 0.9rem + 0.5vw, 1.5rem)' }}
     ref={gridRef}>
     {children}
@@ -692,7 +692,7 @@ const MagicBento = ({
 
               const frontendStats = [
                 {
-                  value: 85,
+                  value: 90,
                   topic: 'UI Development & Responsiveness'
                 },
                 {
@@ -700,17 +700,17 @@ const MagicBento = ({
                   topic: 'Performance Optimization,SEO & UX'
                 },
                 {
-                  value: 78,
+                  value: 85,
                   topic: 'API Integration & State Management'
                 },
               ]
               const backendStats = [
                 {
-                  value: 75,
+                  value: 85,
                   topic: 'API Design & Route Management'
                 },
                 {
-                  value: 70,
+                  value: 80,
                   topic: 'Authentication & Error Handling'
                 },
                 {
@@ -773,6 +773,13 @@ const MagicBento = ({
                   borderColor: '#FFFFFF',
                   textColor: '#FFFFFF'
                 },
+                {
+                  name: 'SQL & NoSQL',
+                  color: '#FFFFFF',
+                  borderColor: '#6d717a',
+                  textColor: '#000000'
+                },
+
               ];
 
               const toolCard = [
@@ -803,7 +810,6 @@ const MagicBento = ({
                 {
                   image: '/shadcn.jpeg',
                   alt: 'shadcn'
-
                 },
                 {
                   image: '/vercel.png',
@@ -835,6 +841,24 @@ const MagicBento = ({
                   profficency: 'C2 (Native)'
                 },
               ]
+
+              const certifications = [
+                {
+                  title: "AWS Certified Cloud Quest Practitioner",
+                  platform: "Udemy",
+                  link: "https://www.udemy.com/share/10bHrn3@8v0iX2k_HVrwQ92_h0a3uzbKnjTyi0pcC6XawSjb1EhBLRFfcSy1Lw2z9Z7P-L3tpQ==/"
+                },
+                {
+                  title: "The Web Developer Bootcamp by Colt Steele",
+                  platform: "Udemy",
+                  link: "https://www.udemy.com/share/101W923@f6C_ESnAbzBS-7vlFjLbVjKWtXVpUQqip5XQBzsZ4JHg0pcBq6w_4YklN6N7dO0wcA==/"
+                },
+                {
+                  title: "Intro to AI Engineering",
+                  platform: "Scrimba",
+                  link: "https://scrimba.com/intro-to-ai-engineering-c032"
+                }
+              ];
 
 
               return (
@@ -883,7 +907,6 @@ const MagicBento = ({
                                       initial={{ opacity: 0 }}
                                       animate={{ opacity: 1 }}
                                       transition={{ duration: 0.6 }}
-
                                     >
                                       <p className='md:text-sm text-[8px]'>{info.value}%</p>
                                     </motion.span>
@@ -895,7 +918,7 @@ const MagicBento = ({
                                     animate={{ width: `250px` }}
                                     transition={{ duration: 1.2 }}
                                   >
-                                    <ProgressBar value={info.value} className=" h-3 rounded" />
+                                    <ProgressBar value={info.value} className=" h-3 w-full rounded" />
                                   </motion.div>
                                 </AnimatePresence>
                               </div>
@@ -974,6 +997,60 @@ const MagicBento = ({
                         <h1 className='flex items-center gap-3 md:text-2xl text-sm pb-4'>Languages <Languages className='text-gray-500' /></h1>
                         {lang.map((info, index) => (
                           <h1 key={index} className='w-full flex justify-between items-center md:leading-8 leading-5 md:text-lg text-[8px]'><span>{info.lang}</span>{info.profficency}</h1>
+                        ))}
+                      </div>
+                    )}
+                    {index === 5 && (
+                      <div className="flex flex-col gap-2 mt-2 w-full">
+
+                        <h2 className="flex items-center gap-2 text-sm md:text-lg font-semibold">
+                          <Award size={18} /> Certifications
+                        </h2>
+
+                        {certifications.map((cert, i) => (
+                          <div
+                            key={i}
+                            className="
+        flex items-center justify-between
+        gap-2
+        bg-[#0f0a1f]
+        border border-[#392e4e]
+        rounded-md
+        px-2 py-1
+        text-xs
+        transition-all duration-300
+        hover:border-purple-400/40
+        "
+                          >
+
+                            {/* Certificate title */}
+                            <p className="text-white text-[8px] md:text-xs leading-tight">
+                              {cert.title}
+                            </p>
+
+                            {/* Platform badge */}
+                            <a
+                              href={cert.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="
+          flex items-center gap-1
+          px-2 py-[2px]
+          rounded
+          border border-purple-500/30
+          text-purple-300
+          bg-purple-700/20
+          transition-all duration-300
+          hover:bg-purple-600/40
+          hover:text-white
+          hover:shadow-[0_0_10px_rgba(168,85,247,0.8)]
+          "
+                            >
+                              {cert.platform}
+                              <ExternalLink size={10} />
+                            </a>
+
+                          </div>
                         ))}
                       </div>
                     )}
