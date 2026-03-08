@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import { useState } from "react";
 import Dock from "../components/Dock";
 import Shuffle from "../components/Shuffle";
-import LikeButton from "../components/likeButton";
+import LikeButton from "../components/LikeButton";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 
