@@ -30,14 +30,14 @@ export default function MyWork() {
         },
         {
             name: 'MyDigitalMenu',
-            description: 'These is a special project one close to my heart',
+            description: 'Built full-stack application allowing restaurant owners to create and manage digital menus, customize branding,view real-time analytics, and process POS orders.',
             tech: ['React.js', 'Node.js'],
             img: ['/mdm-1.png', '/mdm-2.png', '/mdm-3.png', '/mdm-4.png'],
             link: 'https://menu.crobtechlabs.in/'
         },
         {
             name: 'MemoPad+',
-            description: 'These is a special project one close to my heart',
+            description: 'Developed collabrative note management app enabling users to collaborate with each other also adding feature of setting reminders on notes.',
             tech: ['React.js', 'Tailwind CSS', 'Node.js & Express.js', 'Mongoose ODM & MongoDB Atlas', 'JWT tokens', 'Multer'],
             img: ['/memopad-1.png', '/memopad-2.png', '/memopad-3.png', '/memopad-4.png', '/memopad-5.png', '/memopad-6.png', '/memopad-7.png'],
             link: 'https://memopad-project.vercel.app/'
