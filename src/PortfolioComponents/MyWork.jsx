@@ -31,7 +31,7 @@ export default function MyWork() {
         {
             name: 'MyDigitalMenu',
             description: 'Built full-stack application allowing restaurant owners to create and manage digital menus, customize branding,view real-time analytics, and process POS orders.',
-            tech: ['React.js', 'Node.js'],
+            tech: ['Next.js', ' React', 'Tailwind.CSS', 'FastAPI', 'Python', 'MongoDB Atlas'],
             img: ['/mdm-1.png', '/mdm-2.png', '/mdm-3.png', '/mdm-4.png'],
             link: 'https://menu.crobtechlabs.in/'
         },
