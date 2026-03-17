@@ -19,7 +19,7 @@ export default function MyWork() {
             description: 'These is a special project one close to my heart',
             tech: ['React.js', 'Tailwind CSS', 'Node.js & Express.js', 'Mongoose ODM & MongoDB Atlas', 'Supabase Storage', 'JWT & Google OAuth 2 Authentication', 'Socket.io', 'CRON job', 'Jitsi Meet API'],
             img: ['/skillsly-1.png', '/skillsly-2.png', '/skillsly-3.png', '/skillsly-4.png'],
-            link: ''
+            link: 'https://skillsly.vercel.app/'
         },
         {
             name: 'FeedIt',
