@@ -877,10 +877,10 @@ const MagicBento = ({
                       <>
                         <img src="/hero.png" alt="" className='w-3/5 -ml-4 h-full' />
                         <div className='flex flex-col gap-10'>
-                          <p className={`card__description md:text-sm text-[8px] md:leading-5 leading-3 md:mt-5 ml-5 opacity-90`}>
-                            I'm a Passionate web developer finding an oportunity to Explore, Learn & build<br /> To implement  what in my will and always ready to push my limit. In web development Frontend is my forte and quite comfertable to show my skills in making websites beautiful and Functional.
+                          <p className={`card__description md:text-sm text-[8px] md:leading-5 leading-3 md:mt-5 -mt-3 ml-5 opacity-90`}>
+                            Full-stack web developer passionate about building scalable, user-centric applications. Experienced with React, Next.js, Node.js, and MongoDB, with a strong focus on performance, clean architecture, and seamless user experience. Skilled in developing end-to-end solutions, from intuitive frontends to robust backend systems, with an emphasis on writing maintainable and efficient code.
                           </p>
-                          <div className='w-full h-full md:-mt-0 -mt-8'>
+                          <div className='w-full h-full md:-mt-5 -mt-8'>
                             <h1 className='md:text-2xl text-sm flex md:gap-3 gap-1 items-center md:p-3 p-0 md:ml-3 ml-5 w-full'>Tools I Use <PencilRuler size={window.innerWidth < 768 ? 16 : 24} className='text-gray-500' /></h1>
                             <div className="flex flex-wrap justify-evenly md:ml-0 ml-3 md:p-3 p-1 w-[95%] h-fit gap-2" key={index}>
                               {toolCard.map((info, index) => (
