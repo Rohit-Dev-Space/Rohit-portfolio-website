@@ -78,8 +78,15 @@ export default function HeroSection() {
                         glareSize={300}
                         transitionDuration={800}
                         playOnce={false}
+                        className="rounded-full"
                     >
-                        <img src="/moon_icon.png" alt="" />
+                        <div className="w-24 h-24 md:w-22 md:h-22 scale-170 md:scale-190 rounded-full overflow-hidden">
+                            <img
+                                src="/myImg.png"
+                                alt="Rohit"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                     </GlareHover>
                     <p className="text-white md:text-2xl text-[22px] flex items-end gap-3">Hi! I’m Rohit kharvi <span><img src="/hand-icon.png" className="Wave w-10" alt="" /></span></p>
                     <h1 className="text-white md:text-7xl text-[42px] leading-12 md:leading-none text-center font-bold">Fullstack Web Developer <br /> based in Goa.</h1>
