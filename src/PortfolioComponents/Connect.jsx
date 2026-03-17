@@ -24,7 +24,7 @@ export default function Connect() {
         { icon: <FaXTwitter size={18} />, label: 'Twitter', onClick: () => alert('Home!'), className: 'text-white cursor-pointer' },
         { icon: <Instagram size={18} />, label: 'Instagram', onClick: () => window.open('https://instagram.com/rohiiit_khrv', '_blank'), className: 'text-white cursor-pointer' },
         { icon: <Github size={18} />, label: 'GitHub', onClick: () => window.open('https://github.com/Rohit-Dev-Space', '_blank'), className: 'text-white cursor-pointer' },
-        { icon: <Linkedin size={18} />, label: 'LinkedIn', onClick: () => window.open('www.linkedin.com/in/rohit-kharvi-671199320!', '_blank'), className: 'text-white cursor-pointer' },
+        { icon: <Linkedin size={18} />, label: 'LinkedIn', onClick: () => window.open('www.linkedin.com/in/rohit-kharvi-671199320', '_blank'), className: 'text-white cursor-pointer' },
         { icon: < SiLeetcode size={18} />, label: 'Leetcode', onClick: () => window.open("https://leetcode.com/u/82QusZatSJ/", "_blank"), className: 'text-white cursor-pointer' },
     ];
 
